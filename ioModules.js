@@ -76,7 +76,7 @@ class PiNativeOutputModule {
 
     write(index, state) {
         return new Promise((resolve, reject) => {
-            this.outputs[ index ].write(state ? 0 : 1, err => {
+            this.outputs[ index ].write(state ? 1 : 0, err => {
                 if (err) {
                     reject(err);
                 } else {

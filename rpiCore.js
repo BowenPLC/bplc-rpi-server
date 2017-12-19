@@ -64,7 +64,7 @@ class RPICore {
             };
         }
 
-        return this.ioMap[ mod ].set(index, state);
+        return await this.ioMap[ mod ].set(index, state);
     }
 
     async setIOByName(mod, index, state) {
