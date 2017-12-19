@@ -27,7 +27,7 @@ class PiNativeOutputModule {
             new gpio(25, 'out'),
         ];
 
-        outputs.forEach(output => {
+        this.outputs.forEach(output => {
             output.write(0, () => {});
         });
     }
