@@ -45,7 +45,7 @@ class RPICore {
     async dump() {
         const data = [];
         for (let i = 0; i < this.ioMap.length; i++) {
-            modData = await this.ioMap[ i ].getAll();
+            let modData = await this.ioMap[ i ].getAll();
             data.push({
                 type: this.ioMap[ i ].moduleType,
                 name: this.ioMap[ i ],
