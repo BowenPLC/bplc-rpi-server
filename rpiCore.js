@@ -43,7 +43,7 @@ class RPICore {
     }
 
     async dump() {
-        return this.ioMap.map(mod => {
+        return this.ioMap.map(async(mod) => {
             return {
                 type: mod.moduleType,
                 name: mod.name,
