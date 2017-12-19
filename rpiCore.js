@@ -23,7 +23,7 @@ class RPICore {
                 throw new Error(`Unsupported module implementation type ${mod.implType}`);
             }
 
-            this.ioMap.push(ioModules.moduleMap[ mod.moduleType ][ implType ](mod));
+            this.ioMap.push(ioModules.moduleMap[ mod.moduleType ][ mod.implType ](mod));
         });
 
         this.valid = true;
