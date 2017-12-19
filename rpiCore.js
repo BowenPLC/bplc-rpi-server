@@ -43,13 +43,17 @@ class RPICore {
     }
 
     async dump() {
-        return this.ioMap.map(async(mod) => {
-            return {
-                type: mod.moduleType,
-                name: mod.name,
-                data: await mod.getAll(),
-            };
-        });
+        const data = [];
+        for (let i = 0; i < this.ioMap.length; i++) {
+            modData = await this.ioMap[ i ].getAll();
+            data.push({
+                type: this.ioMap[ i ].moduleType,
+                name: this.ioMap[ i ],
+                data: modData,
+            });
+        }
+
+        return data;
     }
 
     async setIOByIndex(mod, index, state) {
