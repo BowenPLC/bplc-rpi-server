@@ -1,6 +1,6 @@
 const ioModules = require('./ioModules');
 
-class FakeCore {
+class RPICore {
     constructor() {
         this.reset();
     }
@@ -73,4 +73,4 @@ class FakeCore {
     }
 }
 
-module.exports.FakeCore = FakeCore;
+module.exports.RPICore = RPICore;

@@ -1,1 +1,1 @@
-module.exports.fakeCore = require('./fakeCore');
+module.exports.rpiCore = require('./rpiCore');

@@ -1,6 +1,6 @@
 const coreServer = require('bplc-node-server');
-const FakeCore = require('./fakeCore').FakeCore;
+const RPICore = require('./rpiCore').RPICore;
 
-const fakeCore = new FakeCore();
-const server = new coreServer.server(fakeCore);
+const rpiCore = new RPICore();
+const server = new coreServer.server(rpiCore);
 server.init();
