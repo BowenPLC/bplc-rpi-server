@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BowenPLC/bplc-rpi-server#readme",
   "dependencies": {
-    "bplc-node-server": "git+https://github.com/BowenPLC/bplc-node-server.git"
+    "bplc-node-server": "git+https://github.com/BowenPLC/bplc-node-server.git",
+    "onoff": "^1.1.8"
   }
 }
