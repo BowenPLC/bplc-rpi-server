@@ -19,7 +19,11 @@ class RPICore {
                 throw new Error(`Unsupported module type ${mod.moduleType}`);
             }
 
-            this.ioMap.push(ioModules.moduleMap[ mod.moduleType ](mod));
+            if (!(mod.implType in ioModules.moduleMap[ mod.moduleType ])) {
+                throw new Error(`Unsupported module implementation type ${mod.implType}`);
+            }
+
+            this.ioMap.push(ioModules.moduleMap[ mod.moduleType ][ implType ](mod));
         });
 
         this.valid = true;
@@ -38,12 +42,12 @@ class RPICore {
         return { valid: this.valid, };
     }
 
-    dump() {
+    async dump() {
         return this.ioMap.map(mod => {
             return {
                 type: mod.moduleType,
                 name: mod.name,
-                data: mod.outputs,
+                data: mod.getAll(),
             };
         });
     }
@@ -69,7 +73,7 @@ class RPICore {
             };
         }
 
-        return foundMod[ 0 ].set(index, state);
+        return await foundMod[ 0 ].set(index, state);
     }
 }
 
