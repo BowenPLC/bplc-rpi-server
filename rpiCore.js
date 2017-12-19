@@ -47,7 +47,7 @@ class RPICore {
             return {
                 type: mod.moduleType,
                 name: mod.name,
-                data: mod.getAll(),
+                data: await mod.getAll(),
             };
         });
     }
