@@ -93,7 +93,7 @@ class PiNativeOutputModule {
                 if(err) {
                     reject(err);
                 } else {
-                    resolve(value);
+                    resolve(value == 1);
                 }
             });
         });
