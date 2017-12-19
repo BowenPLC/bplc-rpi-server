@@ -1,0 +1,22 @@
+{
+  "name": "bplc-rpi-server",
+  "version": "1.0.0",
+  "description": "Raspberry Pi backend for the BowenPLC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BowenPLC/bplc-rpi-server.git"
+  },
+  "author": "Alex Bowen <ajbowen249@gmail.com>",
+  "license": "GNU GPL",
+  "bugs": {
+    "url": "https://github.com/BowenPLC/bplc-rpi-server/issues"
+  },
+  "homepage": "https://github.com/BowenPLC/bplc-rpi-server#readme",
+  "dependencies": {
+    "bplc-node-server": "git+https://github.com/BowenPLC/bplc-node-server.git"
+  }
+}
