@@ -48,7 +48,7 @@ class RPICore {
             let modData = await this.ioMap[ i ].getAll();
             data.push({
                 type: this.ioMap[ i ].moduleType,
-                name: this.ioMap[ i ],
+                name: this.ioMap[ i ].name,
                 data: modData,
             });
         }
